@@ -60,36 +60,35 @@ html, body {
   background: url('sky.jpg') center/cover no-repeat;
 }
 
-.title{
-    position:absolute;
-    top:25px;
-    left:50%;
-    transform:translateX(-50%);
-    width:95%;
-    text-align:center;
-    font-size:clamp(2rem,7vw,5rem);
-    color:#ffe600;
-    text-shadow:3px 3px 0 #000,6px 6px 0 #00c3ff;
-    z-index:20;
+.title {
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:95%;
+  text-align:center;
+  font-size:clamp(2rem,6vw,5rem);
+  color:#ffe600;
+  text-shadow:3px 3px 0 #000,6px 6px 0 #00c3ff;
+  z-index:10;
 }
 
-.island{
-    position:absolute;
-    left:50%;
-    bottom:-40px;
-    transform:translateX(-50%);
-    width:130vw;
-    max-width:none;
+.island {
+  position:absolute;
+  left:50%;
+  bottom:-30px;
+  transform:translateX(-50%);
+  width:min(120vw,1200px);
 }
 
 /* 🎂 CAKE WRAPPER */
-.cake-wrap{
-    position:absolute;
-    left:50%;
-    top:56%;
-    transform:translate(-50%,-50%);
-    width:min(90vw,420px);
-    z-index:25;
+.cake-wrap {
+  position:absolute;
+  top:54%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:min(85vw,380px);
+  z-index:5;
 }
 
 .cake {
@@ -145,27 +144,14 @@ html, body {
   0% { transform: translateY(110vh); }
   100% { transform: translateY(-200px); }
 }
+
 @media (max-width:768px){
-
-.title{
-    top:55px;
-    font-size:2.3rem;
+.title{top:18px;font-size:2.2rem;width:96%;}
+.cake-wrap{width:60vw;top:48%;}
+.island{width:140vw;bottom:-20px;}
+.balloon{width:70px;}
 }
 
-.cake-wrap{
-    width:92vw;
-    top:54%;
-}
-
-.island{
-    width:165vw;
-    bottom:-70px;
-}
-
-.balloon{
-    width:70px;
-}
-}
 </style>
 </head>
 
