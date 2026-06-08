@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Birthday Leni</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -59,32 +60,36 @@ html, body {
   background: url('sky.jpg') center/cover no-repeat;
 }
 
-.title {
-  position: absolute;
-  top: 5%;
-  width: 100%;
-  text-align: center;
-  font-size: 5em;
-  color: #ffe600;
-  text-shadow: 3px 3px 0 #000, 6px 6px 0 #00c3ff;
-  z-index: 10;
+.title{
+    position:absolute;
+    top:25px;
+    left:50%;
+    transform:translateX(-50%);
+    width:95%;
+    text-align:center;
+    font-size:clamp(2rem,7vw,5rem);
+    color:#ffe600;
+    text-shadow:3px 3px 0 #000,6px 6px 0 #00c3ff;
+    z-index:20;
 }
 
-.island {
-  position: absolute;
-  bottom: -60px;
-  left: 50%;
-  transform: translateX(-50%) scale(1.6);
+.island{
+    position:absolute;
+    left:50%;
+    bottom:-40px;
+    transform:translateX(-50%);
+    width:130vw;
+    max-width:none;
 }
 
 /* 🎂 CAKE WRAPPER */
-.cake-wrap {
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  z-index: 5;
+.cake-wrap{
+    position:absolute;
+    left:50%;
+    top:56%;
+    transform:translate(-50%,-50%);
+    width:min(90vw,420px);
+    z-index:25;
 }
 
 .cake {
@@ -139,6 +144,27 @@ html, body {
 @keyframes float {
   0% { transform: translateY(110vh); }
   100% { transform: translateY(-200px); }
+}
+@media (max-width:768px){
+
+.title{
+    top:55px;
+    font-size:2.3rem;
+}
+
+.cake-wrap{
+    width:92vw;
+    top:54%;
+}
+
+.island{
+    width:165vw;
+    bottom:-70px;
+}
+
+.balloon{
+    width:70px;
+}
 }
 </style>
 </head>
